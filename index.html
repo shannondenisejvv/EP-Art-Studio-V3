@@ -3,24 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EP Art Studio | Coastal Version</title>
+  <title>EP Art Studio | Coastal Editorial Version</title>
   <meta name="description" content="EP Art Studio by Estelle Pieters — coastal paintings inspired by the sea, shifting skies, and West Coast light." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #F5F7F8;
-      --surface: rgba(255,255,255,0.82);
-      --surface-strong: rgba(255,255,255,0.92);
-      --primary: #D6E2E5;
-      --accent: #E8DDD2;
-      --line: rgba(44, 52, 56, 0.10);
+      --bg: #E6EBEF;
+      --surface: #F8FAFB;
+      --surface-strong: #FFFFFF;
+      --primary: #D4E5ED;
+      --secondary: #C8D3E4;
+      --accent: #E3E6DB;
       --text: #2C3438;
-      --muted: #66757C;
+      --muted: #66727A;
+      --line: rgba(44, 52, 56, 0.10);
       --shadow: 0 20px 60px rgba(44, 52, 56, 0.08);
-      --radius-xl: 32px;
-      --radius-lg: 24px;
+      --radius-xl: 34px;
+      --radius-lg: 26px;
       --radius-md: 18px;
       --container: min(1180px, calc(100% - 2rem));
       --nav-height: 78px;
@@ -31,7 +32,7 @@
     body {
       margin: 0;
       font-family: 'Raleway', sans-serif;
-      background: linear-gradient(180deg, #fbfcfc 0%, var(--bg) 100%);
+      background: linear-gradient(180deg, #fafdff 0%, var(--bg) 100%);
       color: var(--text);
       line-height: 1.75;
       -webkit-font-smoothing: antialiased;
@@ -69,12 +70,12 @@
     }
 
     h1 {
-      font-size: clamp(3rem, 7vw, 5.6rem);
+      font-size: clamp(3rem, 7vw, 5.7rem);
       letter-spacing: 0.05em;
     }
 
     h2 {
-      font-size: clamp(2rem, 4vw, 3.15rem);
+      font-size: clamp(2rem, 4vw, 3.1rem);
       margin-bottom: 1.1rem;
     }
 
@@ -95,7 +96,7 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(245, 247, 248, 0.80);
+      background: rgba(230, 235, 239, 0.82);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid rgba(44, 52, 56, 0.07);
     }
@@ -156,50 +157,35 @@
     .menu a:hover::after { transform: scaleX(1); }
 
     .hero {
-      padding: 2.2rem 0 3rem;
-    }
-
-    .hero-banner {
+      padding: 3.2rem 0 3.5rem;
       position: relative;
-      min-height: 82vh;
-      border-radius: 38px;
       overflow: hidden;
-      background-image: linear-gradient(180deg, rgba(27, 37, 43, 0.20) 0%, rgba(27, 37, 43, 0.52) 58%, rgba(27, 37, 43, 0.72) 100%), url('https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461002/14_pb6kn7.png');
-      background-size: cover;
-      background-position: center center;
-      box-shadow: var(--shadow);
-      display: flex;
-      align-items: flex-end;
-      border: 1px solid rgba(255,255,255,0.18);
-      isolation: isolate;
     }
 
-    .hero-banner::before {
+    .hero::before {
       content: '';
       position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(214, 226, 229, 0.10), rgba(232, 221, 210, 0.08));
+      width: 360px;
+      height: 360px;
+      right: -120px;
+      top: -40px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212, 229, 237, 0.72) 0%, rgba(212, 229, 237, 0) 72%);
+      filter: blur(22px);
       pointer-events: none;
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      width: min(760px, calc(100% - 2rem));
-      margin: 0 0 2rem 2rem;
-      padding: clamp(1.5rem, 2vw, 2rem);
-      border-radius: 28px;
-      background: rgba(255,255,255,0.14);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.20);
-      color: #fff;
+    .hero-inner {
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto 2rem;
     }
 
     .hero-kicker {
       text-transform: uppercase;
       letter-spacing: 0.28em;
       font-size: 0.8rem;
-      color: rgba(255,255,255,0.82);
+      color: var(--muted);
       margin-bottom: 1rem;
       font-weight: 500;
     }
@@ -209,24 +195,21 @@
       text-transform: uppercase;
       letter-spacing: 0.14em;
       font-size: clamp(1.08rem, 2vw, 1.4rem);
-      margin: 0.9rem 0 1.2rem;
-      color: rgba(255,255,255,0.94);
-    }
-
-    .hero-content p {
-      color: rgba(255,255,255,0.92);
-      max-width: 56ch;
+      margin: 0.9rem 0 1.1rem;
+      color: var(--muted);
     }
 
     .hero-lead {
       font-size: 1.08rem;
-      color: rgba(255,255,255,0.88);
-      margin-bottom: 0.4rem;
+      color: var(--muted);
+      max-width: 54ch;
+      margin: 0 auto 0.55rem;
     }
 
     .btn-row {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 0.9rem;
       margin-top: 1.8rem;
     }
@@ -246,14 +229,35 @@
     .btn:hover { transform: translateY(-2px); }
 
     .btn-primary {
-      background: #fff;
-      color: var(--text);
+      background: var(--text);
+      color: #fff;
     }
 
     .btn-secondary {
-      background: rgba(255,255,255,0.10);
-      border-color: rgba(255,255,255,0.35);
-      color: #fff;
+      background: rgba(255,255,255,0.72);
+      border-color: var(--line);
+      color: var(--text);
+    }
+
+    .hero-image-wrap {
+      width: var(--container);
+      margin: 0 auto;
+    }
+
+    .hero-image-card {
+      background: rgba(255,255,255,0.72);
+      border: 1px solid var(--line);
+      border-radius: 38px;
+      padding: 16px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-image-card img {
+      width: 100%;
+      height: min(68vh, 700px);
+      object-fit: cover;
+      border-radius: 26px;
     }
 
     .editorial-intro {
@@ -268,19 +272,20 @@
     .pottery-panel,
     .contact-panel,
     .contact-list-panel {
-      background: var(--surface);
+      background: rgba(255,255,255,0.82);
       border: 1px solid var(--line);
       box-shadow: var(--shadow);
       border-radius: var(--radius-xl);
       padding: 2rem;
+      backdrop-filter: blur(10px);
     }
 
     .content-card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(214, 226, 229, 0.18));
+      background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(212, 229, 237, 0.22));
     }
 
     .quote-panel {
-      background: linear-gradient(180deg, rgba(232, 221, 210, 0.34), rgba(255,255,255,0.94));
+      background: linear-gradient(180deg, rgba(200, 211, 228, 0.34), rgba(255,255,255,0.92));
     }
 
     blockquote {
@@ -314,7 +319,6 @@
       text-align: right;
     }
 
-    /* same gallery layout as version 2 */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -323,7 +327,7 @@
     }
 
     .art-card {
-      background: var(--surface-strong);
+      background: rgba(255,255,255,0.92);
       border: 1px solid var(--line);
       border-radius: 26px;
       box-shadow: var(--shadow);
@@ -362,14 +366,14 @@
     }
 
     .pottery-panel {
-      background: linear-gradient(135deg, rgba(232, 221, 210, 0.30), rgba(255,255,255,0.94));
+      background: linear-gradient(135deg, rgba(227, 230, 219, 0.54), rgba(255,255,255,0.92));
     }
 
     .pottery-placeholder {
       min-height: 320px;
       border-radius: 26px;
       border: 1.5px dashed rgba(44, 52, 56, 0.14);
-      background: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(214, 226, 229, 0.18));
+      background: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(212, 229, 237, 0.22));
       display: grid;
       place-items: center;
       text-align: center;
@@ -379,7 +383,7 @@
 
     .contact-panel,
     .contact-list-panel {
-      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(214, 226, 229, 0.16));
+      background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(200, 211, 228, 0.16));
     }
 
     .contact-list {
@@ -391,7 +395,7 @@
     .contact-item {
       padding: 1rem 1.1rem;
       border-radius: 18px;
-      background: rgba(255, 255, 255, 0.78);
+      background: rgba(255, 255, 255, 0.80);
       border: 1px solid var(--line);
       transition: transform 180ms ease, background 180ms ease;
     }
@@ -457,17 +461,16 @@
       }
 
       .section { padding: 4rem 0; }
-      .hero { padding-top: 1.25rem; }
+      .hero { padding-top: 2rem; }
 
-      .hero-banner {
-        min-height: 72vh;
+      .hero-image-card {
         border-radius: 28px;
+        padding: 12px;
       }
 
-      .hero-content {
-        width: calc(100% - 1.4rem);
-        margin: 0 0 0.7rem 0.7rem;
-        padding: 1.25rem;
+      .hero-image-card img {
+        height: 44vh;
+        border-radius: 20px;
       }
 
       .content-card,
@@ -511,19 +514,21 @@
 
   <main id="top">
     <section class="hero section">
-      <div class="container">
-        <div class="hero-banner reveal">
-          <div class="hero-content">
-            <div class="hero-kicker">Modern Coastal Portfolio • West Coast • South Africa</div>
-            <h1>EP Art Studio</h1>
-            <div class="hero-name">Estelle Pieters</div>
-            <p class="hero-lead">Capturing light, colour, and the poetry of the sea.</p>
-            <p>Inspired by the rhythm of the ocean and ever-changing skies, I create paintings that bring coastal moments to life through colour and expression.</p>
-            <div class="btn-row">
-              <a class="btn btn-primary" href="#gallery">View the Gallery</a>
-              <a class="btn btn-secondary" href="#contact">Get in Touch</a>
-            </div>
-          </div>
+      <div class="container hero-inner reveal">
+        <div class="hero-kicker">Coastal Editorial Portfolio • West Coast • South Africa</div>
+        <h1>EP Art Studio</h1>
+        <div class="hero-name">Estelle Pieters</div>
+        <p class="hero-lead">Capturing light, colour, and the poetry of the sea.</p>
+        <p>Inspired by the rhythm of the ocean and ever-changing skies, I create paintings that bring coastal moments to life through colour and expression.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#gallery">View the Gallery</a>
+          <a class="btn btn-secondary" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap reveal">
+        <div class="hero-image-card">
+          <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461002/14_pb6kn7.png" alt="Featured sunset seascape painting by Estelle Pieters" />
         </div>
       </div>
     </section>
@@ -621,7 +626,7 @@
   </main>
 
   <footer class="footer">
-    <div class="container">© <span id="year"></span> EP Art Studio · Modern Coastal Version</div>
+    <div class="container">© <span id="year"></span> EP Art Studio · Coastal Editorial Version</div>
   </footer>
 
   <script>
