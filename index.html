@@ -3,23 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EP Art Studio | Coastal Editorial Version</title>
-  <meta name="description" content="EP Art Studio by Estelle Pieters — coastal paintings inspired by the sea, shifting skies, and West Coast light." />
+  <title>EP Art Studio | Premium Coastal Collection</title>
+  <meta name="description" content="EP Art Studio by Estelle Pieters — original coastal paintings and handcrafted pottery inspired by sea, land, and changing light." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #E6EBEF;
-      --surface: #F8FAFB;
+      --bg: #F4EFE9;
+      --surface: #F8F4EF;
       --surface-strong: #FFFFFF;
-      --primary: #D4E5ED;
-      --secondary: #C8D3E4;
-      --accent: #E3E6DB;
-      --text: #2C3438;
-      --muted: #66727A;
-      --line: rgba(44, 52, 56, 0.10);
-      --shadow: 0 20px 60px rgba(44, 52, 56, 0.08);
+      --primary: #D9C5B2;
+      --secondary: #6F8792;
+      --secondary-deep: #4E6A7A;
+      --accent: #6F7F72;
+      --text: #2F3A3D;
+      --muted: #667173;
+      --line: rgba(47, 58, 61, 0.12);
+      --shadow: 0 20px 60px rgba(47, 58, 61, 0.10);
       --radius-xl: 34px;
       --radius-lg: 26px;
       --radius-md: 18px;
@@ -32,7 +33,9 @@
     body {
       margin: 0;
       font-family: 'Raleway', sans-serif;
-      background: linear-gradient(180deg, #fafdff 0%, var(--bg) 100%);
+      background:
+        radial-gradient(circle at top right, rgba(217, 197, 178, 0.24), transparent 28%),
+        linear-gradient(180deg, #fbf8f4 0%, var(--bg) 100%);
       color: var(--text);
       line-height: 1.75;
       -webkit-font-smoothing: antialiased;
@@ -58,34 +61,34 @@
       text-transform: uppercase;
       letter-spacing: 0.24em;
       color: var(--muted);
-      font-weight: 500;
+      font-weight: 600;
     }
 
     h1, h2, h3 {
       font-family: 'Playfair Display', serif;
       font-weight: 500;
       line-height: 1.18;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.03em;
       margin: 0;
     }
 
     h1 {
-      font-size: clamp(3rem, 7vw, 5.7rem);
+      font-size: clamp(3rem, 7vw, 5.6rem);
       letter-spacing: 0.05em;
     }
 
     h2 {
-      font-size: clamp(2rem, 4vw, 3.1rem);
+      font-size: clamp(2rem, 4vw, 3rem);
       margin-bottom: 1.1rem;
     }
 
     h3 {
-      font-size: 1.55rem;
-      margin-bottom: 0.6rem;
+      font-size: 1.45rem;
+      margin-bottom: 0.5rem;
     }
 
     p {
-      margin: 0 0 1.15rem;
+      margin: 0 0 1.1rem;
       font-size: 1.02rem;
       color: var(--text);
     }
@@ -96,9 +99,9 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(230, 235, 239, 0.82);
+      background: rgba(244, 239, 233, 0.86);
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(44, 52, 56, 0.07);
+      border-bottom: 1px solid rgba(47, 58, 61, 0.08);
     }
 
     .nav {
@@ -165,13 +168,13 @@
     .hero::before {
       content: '';
       position: absolute;
-      width: 360px;
-      height: 360px;
-      right: -120px;
-      top: -40px;
+      width: 420px;
+      height: 420px;
+      right: -130px;
+      top: -80px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(212, 229, 237, 0.72) 0%, rgba(212, 229, 237, 0) 72%);
-      filter: blur(22px);
+      background: radial-gradient(circle, rgba(111, 135, 146, 0.18) 0%, rgba(111, 135, 146, 0) 72%);
+      filter: blur(24px);
       pointer-events: none;
     }
 
@@ -187,16 +190,16 @@
       font-size: 0.8rem;
       color: var(--muted);
       margin-bottom: 1rem;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .hero-name {
       font-family: 'Playfair Display', serif;
       text-transform: uppercase;
       letter-spacing: 0.14em;
-      font-size: clamp(1.08rem, 2vw, 1.4rem);
+      font-size: clamp(1.08rem, 2vw, 1.35rem);
       margin: 0.9rem 0 1.1rem;
-      color: var(--muted);
+      color: var(--secondary-deep);
     }
 
     .hero-lead {
@@ -222,16 +225,19 @@
       border-radius: 999px;
       font-size: 0.94rem;
       font-weight: 500;
-      transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+      transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, color 180ms ease;
       border: 1px solid transparent;
     }
 
     .btn:hover { transform: translateY(-2px); }
 
     .btn-primary {
-      background: var(--text);
+      background: var(--secondary-deep);
       color: #fff;
+      box-shadow: 0 16px 30px rgba(78, 106, 122, 0.22);
     }
+
+    .btn-primary:hover { background: #425b69; }
 
     .btn-secondary {
       background: rgba(255,255,255,0.72);
@@ -245,7 +251,7 @@
     }
 
     .hero-image-card {
-      background: rgba(255,255,255,0.72);
+      background: rgba(255,255,255,0.82);
       border: 1px solid var(--line);
       border-radius: 38px;
       padding: 16px;
@@ -260,7 +266,9 @@
       border-radius: 26px;
     }
 
-    .editorial-intro {
+    .editorial-intro,
+    .studio-layout,
+    .contact-grid {
       display: grid;
       grid-template-columns: 1.05fr 0.95fr;
       gap: 1.5rem;
@@ -269,10 +277,11 @@
 
     .content-card,
     .quote-panel,
-    .pottery-panel,
+    .studio-panel,
+    .studio-image-card,
     .contact-panel,
     .contact-list-panel {
-      background: rgba(255,255,255,0.82);
+      background: rgba(255,255,255,0.86);
       border: 1px solid var(--line);
       box-shadow: var(--shadow);
       border-radius: var(--radius-xl);
@@ -281,27 +290,27 @@
     }
 
     .content-card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(212, 229, 237, 0.22));
+      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(217, 197, 178, 0.16));
     }
 
     .quote-panel {
-      background: linear-gradient(180deg, rgba(200, 211, 228, 0.34), rgba(255,255,255,0.92));
+      background: linear-gradient(180deg, rgba(111, 135, 146, 0.12), rgba(255,255,255,0.95));
     }
 
-    blockquote {
-      margin: 0;
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.55rem, 2.2vw, 2rem);
-      line-height: 1.5;
+    .studio-panel {
+      background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(111, 127, 114, 0.10));
     }
 
-    .quote-author {
-      margin-top: 1rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-size: 0.82rem;
-      font-weight: 500;
+    .studio-image-card {
+      padding: 14px;
+      background: rgba(255,255,255,0.92);
+    }
+
+    .studio-image-card img {
+      border-radius: 24px;
+      height: 100%;
+      min-height: 420px;
+      object-fit: cover;
     }
 
     .gallery-head {
@@ -315,7 +324,7 @@
     .gallery-meta {
       color: var(--muted);
       font-size: 0.95rem;
-      max-width: 38ch;
+      max-width: 40ch;
       text-align: right;
     }
 
@@ -327,11 +336,17 @@
     }
 
     .art-card {
-      background: rgba(255,255,255,0.92);
+      background: rgba(255,255,255,0.94);
       border: 1px solid var(--line);
       border-radius: 26px;
       box-shadow: var(--shadow);
       padding: 14px;
+      transition: transform 220ms ease, box-shadow 220ms ease;
+    }
+
+    .art-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 26px 65px rgba(47, 58, 61, 0.14);
     }
 
     .art-card img {
@@ -343,47 +358,84 @@
     }
 
     .art-caption {
-      margin-top: 0.9rem;
-      padding: 0 0.2rem 0.2rem;
+      margin-top: 0.95rem;
+      padding: 0 0.2rem 0.25rem;
     }
 
     .art-caption strong {
       display: block;
       font-weight: 500;
-      margin-bottom: 0.15rem;
+      margin-bottom: 0.2rem;
+      font-size: 1.08rem;
     }
 
-    .art-caption span {
+    .art-meta {
+      display: block;
+      font-size: 0.84rem;
       color: var(--muted);
-      font-size: 0.92rem;
+      margin-bottom: 0.45rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
 
-    .pottery-wrap,
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-    }
-
-    .pottery-panel {
-      background: linear-gradient(135deg, rgba(227, 230, 219, 0.54), rgba(255,255,255,0.92));
-    }
-
-    .pottery-placeholder {
-      min-height: 320px;
-      border-radius: 26px;
-      border: 1.5px dashed rgba(44, 52, 56, 0.14);
-      background: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(212, 229, 237, 0.22));
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 2rem;
+    .art-desc {
+      font-size: 0.95rem;
       color: var(--muted);
+      margin: 0.45rem 0 0.85rem;
+      min-height: 3.2em;
+    }
+
+    .art-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .price {
+      font-weight: 600;
+      font-size: 0.96rem;
+      color: var(--text);
+    }
+
+    .enquire-btn {
+      font-size: 0.82rem;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      transition: all 0.2s ease;
+    }
+
+    .enquire-btn:hover {
+      background: var(--text);
+      color: #fff;
+      border-color: var(--text);
+    }
+
+    .sold-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.42rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(111, 127, 114, 0.12);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 600;
+      border: 1px solid rgba(111, 127, 114, 0.18);
+    }
+
+    .pottery-card img {
+      height: 360px;
+      object-fit: cover;
+      background: #f6f1eb;
     }
 
     .contact-panel,
     .contact-list-panel {
-      background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(200, 211, 228, 0.16));
+      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(111, 135, 146, 0.08));
     }
 
     .contact-list {
@@ -395,7 +447,7 @@
     .contact-item {
       padding: 1rem 1.1rem;
       border-radius: 18px;
-      background: rgba(255, 255, 255, 0.80);
+      background: rgba(255, 255, 255, 0.84);
       border: 1px solid var(--line);
       transition: transform 180ms ease, background 180ms ease;
     }
@@ -434,7 +486,7 @@
 
     @media (max-width: 1080px) {
       .editorial-intro,
-      .pottery-wrap,
+      .studio-layout,
       .contact-grid,
       .gallery-head {
         grid-template-columns: 1fr;
@@ -475,7 +527,8 @@
 
       .content-card,
       .quote-panel,
-      .pottery-panel,
+      .studio-panel,
+      .studio-image-card,
       .contact-panel,
       .contact-list-panel {
         padding: 1.4rem;
@@ -489,8 +542,12 @@
         height: 320px;
       }
 
-      blockquote {
-        font-size: 1.35rem;
+      .pottery-card img {
+        height: 300px;
+      }
+
+      .studio-image-card img {
+        min-height: 300px;
       }
     }
   </style>
@@ -504,7 +561,7 @@
       </a>
       <nav class="menu" aria-label="Main navigation">
         <a href="#about">About</a>
-        <a href="#story">Story</a>
+        <a href="#studio">Studio</a>
         <a href="#gallery">Gallery</a>
         <a href="#pottery">Pottery</a>
         <a href="#contact">Contact</a>
@@ -518,8 +575,8 @@
         <div class="hero-kicker">Coastal Editorial Portfolio • West Coast • South Africa</div>
         <h1>EP Art Studio</h1>
         <div class="hero-name">Estelle Pieters</div>
-        <p class="hero-lead">Capturing light, colour, and the poetry of the sea.</p>
-        <p>Inspired by the rhythm of the ocean and ever-changing skies, I create paintings that bring coastal moments to life through colour and expression.</p>
+        <p class="hero-lead">Where sea and land meet changing light—capturing calm, movement, and the rich colours of sunset.</p>
+        <p>Inspired by the rhythm of the ocean and ever-changing skies, Estelle creates paintings that bring coastal moments to life through colour, atmosphere, and feeling.</p>
         <div class="btn-row">
           <a class="btn btn-primary" href="#gallery">View the Gallery</a>
           <a class="btn btn-secondary" href="#contact">Get in Touch</a>
@@ -538,19 +595,32 @@
         <article class="content-card reveal">
           <div class="eyebrow">The Artist</div>
           <h2>Rooted in craft, guided by feeling.</h2>
-          <p>I began my artistic journey in 1975 with pottery, exploring wheelwork, hand-building, and mould-making as forms of creative expression.</p>
-          <p>In 1998, I transitioned into painting—initially to decorate my ceramics—but quickly fell in love with the medium itself. I started with acrylics and later moved to oils, which remain my favourite.</p>
-          <p>With the guidance of inspiring teachers Dennis Hilton Lees and Cyril Coetzee, I developed both confidence and a love for experimentation that continues to shape my work.</p>
+          <p>Estelle began her artistic journey in 1975 with pottery, exploring wheelwork, hand-building, and mould-making as forms of creative expression.</p>
+          <p>In 1998, she transitioned into painting—initially to decorate her ceramics—but quickly fell in love with the medium itself. She started with acrylics and later moved to oils, which remain her favourite.</p>
+          <p>With the guidance of inspiring teachers Dennis Hilton Lees and Cyril Coetzee, she developed both confidence and a love for experimentation that continues to shape her work.</p>
         </article>
 
-        <aside class="quote-panel reveal" id="story">
+        <aside class="quote-panel reveal">
           <div class="eyebrow">The Story</div>
           <h2>West Coast light, sea, and sky.</h2>
-          <p>I have been a member of the South African Society of Artists (SASA) since 2012.</p>
-          <p>The sea has always been my greatest source of inspiration. Growing up in Durban and now living along the shoreline of Saldanha, I am constantly drawn to coastal landscapes. Plein air painting is a passion of mine, allowing me to capture fleeting light, shifting skies, and the ever-changing mood of the ocean.</p>
-          <p>While I now spend most of my time painting in my studio, I still value the shared experience of creating alongside others.</p>
-          <p>Colour plays a central role in my work—I rarely use paint straight from the tube, preferring to mix my own tones to create depth and emotion. I also explore abstract art from time to time to keep my work loose and expressive.</p>
+          <p>Estelle has been a member of the South African Society of Artists since 2012.</p>
+          <p>The sea has always been her greatest source of inspiration. Growing up in Durban and now living along the shoreline of Saldanha, she is constantly drawn to coastal landscapes and changing weather.</p>
+          <p>Plein air painting remains a passion—capturing fleeting light, shifting skies, and the many moods of the ocean. Colour plays a central role in her work, with hand-mixed tones that bring warmth, depth, and emotion to every piece.</p>
         </aside>
+      </div>
+    </section>
+
+    <section id="studio" class="section">
+      <div class="container studio-layout">
+        <div class="studio-panel reveal">
+          <div class="eyebrow">The Studio</div>
+          <h2>A space where the work comes to life.</h2>
+          <p>This is where the paintings begin—surrounded by brushes, canvases, pottery, and the quiet rhythm of making. The studio holds both the story of Estelle’s beginnings in clay and her continued love for painting the sea.</p>
+          <p class="muted">More studio and process imagery can be added here over time, creating a richer window into the making behind each collection.</p>
+        </div>
+        <div class="studio-image-card reveal">
+          <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775818810/studio_enhanced_soft_plpobk.png" alt="Estelle Pieters in her studio" />
+        </div>
       </div>
     </section>
 
@@ -559,47 +629,196 @@
         <div class="gallery-head reveal">
           <div>
             <div class="eyebrow">Gallery</div>
-            <h2>A calm, equal-view presentation of the collection.</h2>
+            <h2>Original paintings shaped by sea, land, and light.</h2>
           </div>
-          <p class="gallery-meta">The same balanced 2-column gallery layout is kept here so each work can be viewed clearly and consistently.</p>
+          <p class="gallery-meta">A curated collection of coastal works presented in a calm, gallery-style layout with artwork details and enquiry options.</p>
         </div>
 
         <div class="gallery-grid">
-          <figure class="art-card reveal"><img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461000/1_lssiyv.png" alt="Painting by Estelle Pieters" /><figcaption class="art-caption"><strong>Coastal Light</strong><span>Oil on canvas</span></figcaption></figure>
-          <figure class="art-card reveal"><img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461000/2_nvhpzq.png" alt="Painting by Estelle Pieters" /><figcaption class="art-caption"><strong>Sea Horizon</strong><span>Original artwork</span></figcaption></figure>
-          <figure class="art-card reveal"><img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461000/3_fzs47w.png" alt="Painting by Estelle Pieters" /><figcaption class="art-caption"><strong>Evening Tide</strong><span>Original artwork</span></figcaption></figure>
-          <figure class="art-card reveal"><img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461000/4_qipiyx.png" alt="Painting by Estelle Pieters" /><figcaption class="art-caption"><strong>Quiet Shore</strong><span>Original artwork</span></figcaption></figure>
-          <figure class="art-card reveal"><img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461001/5_nx3hpr.png" alt="Painting by Estelle Pieters" /><figcaption class="art-caption"><strong>Open Water</strong><span>Original artwork</span></figcaption></figure>
-          <figure class="art-card reveal"><img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461001/6_s1kiby.png" alt="Painting by Estelle Pieters" /><figcaption class="art-caption"><strong>Salt Air</strong><span>Original artwork</span></figcaption></figure>
-          <figure class="art-card reveal"><img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461001/7_wxqdc3.png" alt="Painting by Estelle Pieters" /><figcaption class="art-caption"><strong>Shifting Skies</strong><span>Original artwork</span></figcaption></figure>
-          <figure class="art-card reveal"><img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461001/8_whbjpz.png" alt="Painting by Estelle Pieters" /><figcaption class="art-caption"><strong>Low Tide</strong><span>Original artwork</span></figcaption></figure>
-          <figure class="art-card reveal"><img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461001/9_nvxdlj.png" alt="Painting by Estelle Pieters" /><figcaption class="art-caption"><strong>Sea Glow</strong><span>Original artwork</span></figcaption></figure>
-          <figure class="art-card reveal"><img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461001/10_acxy1j.png" alt="Painting by Estelle Pieters" /><figcaption class="art-caption"><strong>Blue Silence</strong><span>Original artwork</span></figcaption></figure>
-          <figure class="art-card reveal"><img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461002/11_xwq6hv.png" alt="Painting by Estelle Pieters" /><figcaption class="art-caption"><strong>Ocean Memory</strong><span>Original artwork</span></figcaption></figure>
-          <figure class="art-card reveal"><img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461002/12_qbbycx.png" alt="Painting by Estelle Pieters" /><figcaption class="art-caption"><strong>West Coast Drift</strong><span>Original artwork</span></figcaption></figure>
-          <figure class="art-card reveal"><img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461002/13_etrxx3.png" alt="Painting by Estelle Pieters" /><figcaption class="art-caption"><strong>Soft Horizon</strong><span>Original artwork</span></figcaption></figure>
-          <figure class="art-card reveal"><img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461002/14_pb6kn7.png" alt="Painting by Estelle Pieters" /><figcaption class="art-caption"><strong>Sunset Echo</strong><span>Original artwork</span></figcaption></figure>
-          <figure class="art-card reveal"><img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461003/15_wm7ucc.png" alt="Painting by Estelle Pieters" /><figcaption class="art-caption"><strong>Coastal Reflection</strong><span>Original artwork</span></figcaption></figure>
-          <figure class="art-card reveal"><img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461002/16_dlkx7g.png" alt="Painting by Estelle Pieters" /><figcaption class="art-caption"><strong>Light on Water</strong><span>Original artwork</span></figcaption></figure>
-          <figure class="art-card reveal"><img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461000/17_oo3x6m.png" alt="Painting by Estelle Pieters" /><figcaption class="art-caption"><strong>Still Sea</strong><span>Original artwork</span></figcaption></figure>
-          <figure class="art-card reveal"><img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461000/18_ztrno6.png" alt="Painting by Estelle Pieters" /><figcaption class="art-caption"><strong>Golden Shore</strong><span>Original artwork</span></figcaption></figure>
+          <figure class="art-card reveal">
+            <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461000/1_lssiyv.png" alt="Capetown Waterfront by Estelle Pieters" />
+            <figcaption class="art-caption">
+              <strong>Capetown Waterfront</strong>
+              <span class="art-meta">300 x 500 · Original painting</span>
+              <p class="art-desc">With Table Mountain looming above in all its majesty, this waterfront scene captures atmosphere, scale, and coastal energy.</p>
+              <div class="art-footer">
+                <span class="price">R3500</span>
+                <a href="#contact" class="enquire-btn">Enquire</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="art-card reveal">
+            <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461000/2_nvhpzq.png" alt="Gonnemans Kraal by Estelle Pieters" />
+            <figcaption class="art-caption">
+              <strong>Gonnemans Kraal</strong>
+              <span class="art-meta">300 x 500 · Original painting</span>
+              <p class="art-desc">Painted just past Jacobsbaai, this plein air piece reflects the openness and natural beauty of the West Coast.</p>
+              <div class="art-footer">
+                <span class="price">R2200</span>
+                <a href="#contact" class="enquire-btn">Enquire</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="art-card reveal">
+            <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461000/3_fzs47w.png" alt="Sunset Yserfontein by Estelle Pieters" />
+            <figcaption class="art-caption">
+              <strong>Sunset Yserfontein</strong>
+              <span class="art-meta">300 x 400 · Original painting</span>
+              <p class="art-desc">A warm West Coast sunset painted with the rich colour and changing light that defines this collection.</p>
+              <div class="art-footer">
+                <span class="price">R1800</span>
+                <a href="#contact" class="enquire-btn">Enquire</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="art-card reveal">
+            <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461000/4_qipiyx.png" alt="Sea Spray by Estelle Pieters" />
+            <figcaption class="art-caption">
+              <strong>Sea Spray</strong>
+              <span class="art-meta">300 x 400 · Original painting</span>
+              <p class="art-desc">The beauty of wild water crashing against rock, full of movement, texture, and the force of the sea.</p>
+              <div class="art-footer">
+                <span class="price">R1800</span>
+                <a href="#contact" class="enquire-btn">Enquire</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="art-card reveal">
+            <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461001/5_nx3hpr.png" alt="Evening Tide by Estelle Pieters" />
+            <figcaption class="art-caption">
+              <strong>Evening Tide</strong>
+              <span class="art-meta">300 x 500 · Original painting</span>
+              <p class="art-desc">Inspired by the view from Alegria Restaurant in St Helena Bay, this work holds the softness and depth of late-day coastal light.</p>
+              <div class="art-footer">
+                <span class="price">R2000</span>
+                <a href="#contact" class="enquire-btn">Enquire</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="art-card reveal">
+            <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461001/6_s1kiby.png" alt="Restless Seas by Estelle Pieters" />
+            <figcaption class="art-caption">
+              <strong>Restless Seas</strong>
+              <span class="art-meta">300 x 400 · Original painting</span>
+              <p class="art-desc">A Hermanus seascape that captures the energy and unpredictability of wild moving water.</p>
+              <div class="art-footer">
+                <span class="price">R1800</span>
+                <a href="#contact" class="enquire-btn">Enquire</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="art-card reveal">
+            <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461001/7_wxqdc3.png" alt="Saldana Sunset by Estelle Pieters" />
+            <figcaption class="art-caption">
+              <strong>Saldana Sunset</strong>
+              <span class="art-meta">300 x 400 · Original painting</span>
+              <p class="art-desc">A glowing Saldanha sunset painted with warmth, stillness, and the soft drama of evening light.</p>
+              <div class="art-footer">
+                <span class="price">R1800</span>
+                <a href="#contact" class="enquire-btn">Enquire</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="art-card reveal">
+            <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461001/8_whbjpz.png" alt="Pink Sunrise by Estelle Pieters" />
+            <figcaption class="art-caption">
+              <strong>Pink Sunrise</strong>
+              <span class="art-meta">300 x 400 · Original painting</span>
+              <p class="art-desc">Inspired by Garden Route beauty, this piece brings a gentle glow and soft colour into the collection.</p>
+              <div class="art-footer">
+                <span class="price">R1800</span>
+                <a href="#contact" class="enquire-btn">Enquire</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="art-card reveal">
+            <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461001/9_nvxdlj.png" alt="Oyster Catcher 1 by Estelle Pieters" />
+            <figcaption class="art-caption">
+              <strong>Oyster Catcher 1</strong>
+              <span class="art-meta">300 x 500 · Original painting</span>
+              <p class="art-desc">Painted from Plettenberg Bay, this piece holds the character and beauty of the coastline in a more intimate way.</p>
+              <div class="art-footer">
+                <span class="sold-badge">Sold</span>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="art-card reveal">
+            <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461001/10_acxy1j.png" alt="Sunlit Seas by Estelle Pieters" />
+            <figcaption class="art-caption">
+              <strong>Sunlit Seas</strong>
+              <span class="art-meta">Original painting</span>
+              <p class="art-desc">The ocean in all its majesty, with sunlight striking the turning walls of water in a moment of luminous movement.</p>
+              <div class="art-footer">
+                <a href="#contact" class="enquire-btn">Enquire</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="art-card reveal">
+            <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775461002/11_xwq6hv.png" alt="Breaking Waves by Estelle Pieters" />
+            <figcaption class="art-caption">
+              <strong>Breaking Waves</strong>
+              <span class="art-meta">Original painting</span>
+              <p class="art-desc">A work inspired by hours spent watching the sea—its rhythm, power, and endless beauty along the shoreline.</p>
+              <div class="art-footer">
+                <a href="#contact" class="enquire-btn">Enquire</a>
+              </div>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
     <section id="pottery" class="section">
-      <div class="container pottery-wrap">
-        <div class="pottery-panel reveal">
-          <div class="eyebrow">Pottery</div>
-          <h2>The first creative language.</h2>
-          <p>Pottery was where the journey began—through wheelwork, hand-building, and mould-making. This section is ready for future ceramic pieces, process images, or a small collection archive.</p>
-          <p class="muted">For now, it serves as a placeholder for upcoming pottery content while the current focus remains on Estelle’s painting collection.</p>
-        </div>
-        <div class="pottery-placeholder reveal">
+      <div class="container">
+        <div class="gallery-head reveal">
           <div>
-            <h3>Pottery collection coming soon</h3>
-            <p>Add ceramics, detail shots, studio images, or a separate collection page here later.</p>
+            <div class="eyebrow">Pottery</div>
+            <h2>Handcrafted forms, rooted in tradition.</h2>
           </div>
+          <p class="gallery-meta">A growing collection of ceramic pieces that honours where the creative journey first began.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="art-card pottery-card reveal">
+            <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775817685/1000034580_pmsbzs.jpg" alt="Handcrafted pottery by Estelle Pieters" />
+          </figure>
+          <figure class="art-card pottery-card reveal">
+            <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775817684/1000034565_f2qovn.jpg" alt="Handcrafted pottery by Estelle Pieters" />
+          </figure>
+          <figure class="art-card pottery-card reveal">
+            <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775817683/1000034576_aas2dj.jpg" alt="Handcrafted pottery by Estelle Pieters" />
+          </figure>
+          <figure class="art-card pottery-card reveal">
+            <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775817682/1000034577_eefa99.jpg" alt="Handcrafted pottery by Estelle Pieters" />
+          </figure>
+          <figure class="art-card pottery-card reveal">
+            <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775817682/1000034564_sfial8.jpg" alt="Handcrafted pottery by Estelle Pieters" />
+          </figure>
+          <figure class="art-card pottery-card reveal">
+            <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775817682/1000034566_1_cxwkzt.jpg" alt="Handcrafted pottery by Estelle Pieters" />
+          </figure>
+          <figure class="art-card pottery-card reveal">
+            <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775817681/1000034563_r979ci.jpg" alt="Handcrafted pottery by Estelle Pieters" />
+          </figure>
+          <figure class="art-card pottery-card reveal">
+            <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775817681/1000034567_tf1imi.jpg" alt="Handcrafted pottery by Estelle Pieters" />
+          </figure>
+          <figure class="art-card pottery-card reveal">
+            <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775817680/1000034562_i1hfwt.jpg" alt="Handcrafted pottery by Estelle Pieters" />
+          </figure>
+          <figure class="art-card pottery-card reveal">
+            <img src="https://res.cloudinary.com/dqqyitjmb/image/upload/v1775817680/1000034561_emelia.jpg" alt="Handcrafted pottery by Estelle Pieters" />
+          </figure>
         </div>
       </div>
     </section>
@@ -608,8 +827,8 @@
       <div class="container contact-grid">
         <div class="contact-panel reveal">
           <div class="eyebrow">Closing Note</div>
-          <h2>Each painting is a moment held in time—an expression of light, place, and feeling.</h2>
-          <p class="muted">For enquiries, commissions, available works, or studio contact, use the details alongside.</p>
+          <h2>Each piece is an expression of place, light, and feeling.</h2>
+          <p class="muted">For artwork enquiries, available works, commissions, or studio contact, use the details alongside.</p>
         </div>
         <div class="contact-list-panel reveal">
           <div class="eyebrow">Contact</div>
@@ -626,7 +845,7 @@
   </main>
 
   <footer class="footer">
-    <div class="container">© <span id="year"></span> EP Art Studio · Coastal Editorial Version</div>
+    <div class="container">© <span id="year"></span> EP Art Studio · Premium Coastal Collection</div>
   </footer>
 
   <script>
